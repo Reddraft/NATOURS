@@ -3,7 +3,7 @@
 
     &__photo {
         width: 55%;
-        box-shadow: 0 1.6rem 4rem rgba($color-black, .4);
+        @include box_shadow(4);
         border-radius: .2rem;
         position: absolute;
         z-index: 1;
@@ -24,7 +24,7 @@
 
         &:hover {
             transform: scale(1.05) translateY(.5rem);
-            box-shadow: 0 2.4rem 4.8rem rgba($color-black, .4);
+            @include box_shadow(6);
             z-index: 2;
             outline-offset: 2rem;
             outline: 1.5rem solid $color-primary;

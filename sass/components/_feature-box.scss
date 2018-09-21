@@ -4,8 +4,8 @@
     padding: 2.4rem;
     text-align: center;
     border-radius: .2rem;
-    box-shadow: 0 1.6rem 4rem rgba($color-black, .2);
-    transition: transform .25s;
+    @include box_shadow(4);
+    transition: all .25s;
 
     &__icon {
         font-size: 6rem;
@@ -22,6 +22,7 @@
     
     &:hover {
         transform: translateY(-1.5rem) scale(1.04);
+        @include box_shadow(6);
     }
     
     
