@@ -6,6 +6,7 @@
     border-radius: .2rem;
     @include box_shadow(4);
     transition: all .25s;
+    backface-visibility: hidden;
 
     &__icon {
         font-size: 6rem;
