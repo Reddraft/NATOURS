@@ -81,15 +81,14 @@
         letter-spacing: .2rem;
         color: $color-white;
         background-image: linear-gradient(to right, $color-primary, $color-primary-dark);
-        background-position: 100% 0;
         background-size: 150%;
-        transition: all .25s;
+        transition: all .4s;
     }
 
     &:hover {
         transform: translateY(-.2rem);
         @include box_shadow(3);
-        background-position: 0 0;             
+        background-position: 100%;             
     }
     &:active {
         transform: translateY(-.1rem);
