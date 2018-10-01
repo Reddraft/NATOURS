@@ -3,6 +3,10 @@
     padding: 8rem 0;
     font-size: 1.4rem;
 
+    @include responsive(tab-port) { 
+        padding: 4.8rem 0;        
+    } 
+
     &__logo-box {
         text-align: center; 
     }
@@ -14,6 +18,12 @@
 
     &__navigation {
         float: right;
+
+        @include responsive(tab-port) { 
+            width: 100%;
+            text-align: center;        
+        } 
+
     }
 
     &__navigation, 
@@ -62,6 +72,12 @@
         color: $color-gray-dark;
         text-align: justify;
         width: 95%;
-        float: left; 
+        float: left;
+        
+        @include responsive(tab-port) { 
+            width: 100%;
+            text-align: center;
+            float: none;        
+        } 
     }
 }

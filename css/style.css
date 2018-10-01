@@ -11,6 +11,9 @@ $breakpoint argument choices
 - tab-port
 - tab-land
 - big-desktop
+
+ORDER: Base + Typography > general layout + grid > page layout
+
 */
 *,
 *::before,
@@ -34,6 +37,9 @@ html {
 body {
   padding: 3rem;
   box-sizing: border-box; }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 body {
   font-family: 'Lato', sans-serif;
@@ -53,8 +59,12 @@ body {
     font-weight: 400;
     letter-spacing: 3.5rem;
     margin-right: -3.5rem;
-    animation: moveInLeft 1s ease-in-out .25s backwards;
-    /* animation: name duration timing-function delay iteration-count direction fill-mode; */ }
+    animation: moveInLeft 1s ease-in-out .25s backwards; }
+    @media (max-width: 37.5em) {
+      .heading-primary--main {
+        letter-spacing: 1rem;
+        font-size: 5rem;
+        margin-right: 0; } }
   .heading-primary--sub {
     display: block;
     font-size: 2rem;
@@ -62,6 +72,11 @@ body {
     letter-spacing: 1.74rem;
     margin-right: -1.74rem;
     animation: moveInRight 1s ease-in-out .25s backwards; }
+    @media (max-width: 37.5em) {
+      .heading-primary--sub {
+        letter-spacing: .5rem;
+        margin-right: 0;
+        font-weight: 400; } }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -74,6 +89,13 @@ body {
   color: transparent;
   transition: all .2s;
   backface-visibility: hidden; }
+  @media (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 3rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.5rem;
+      line-height: 1.25; } }
   .heading-secondary:hover {
     transform: scale(1.05) translateY(-1rem);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
@@ -574,6 +596,10 @@ body {
 .row {
   max-width: 114rem;
   margin: 0 auto; }
+  @media (max-width: 56.25em) {
+    .row {
+      max-width: 50rem;
+      padding: 0 4.8rem; } }
   .row::after {
     content: "";
     display: table;
@@ -582,8 +608,18 @@ body {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 8rem; }
+      @media (max-width: 56.25em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 3.2rem; } }
+    @media (max-width: 56.25em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
   .row:not(:last-child) {
     margin-bottom: 4.8rem; }
+    @media (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 3.2rem; } }
   .row .col-1-of-2 {
     width: calc((100% - 8rem) / 2); }
   .row .col-1-of-3 {
@@ -605,6 +641,10 @@ body {
   background-position: top;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); }
+  @media (max-width: 37.5em) {
+    .header {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); } }
   .header__logo-box {
     position: absolute;
     top: 4rem;
@@ -622,6 +662,9 @@ body {
   background-color: #333;
   padding: 8rem 0;
   font-size: 1.4rem; }
+  @media (max-width: 56.25em) {
+    .footer {
+      padding: 4.8rem 0; } }
   .footer__logo-box {
     text-align: center; }
   .footer__logo {
@@ -629,6 +672,10 @@ body {
     height: auto; }
   .footer__navigation {
     float: right; }
+    @media (max-width: 56.25em) {
+      .footer__navigation {
+        width: 100%;
+        text-align: center; } }
   .footer__navigation, .footer__copyright {
     border-top: 1px solid #999;
     padding-top: 2rem;
@@ -656,6 +703,11 @@ body {
     text-align: justify;
     width: 95%;
     float: left; }
+    @media (max-width: 56.25em) {
+      .footer__copyright {
+        width: 100%;
+        text-align: center;
+        float: none; } }
 
 .navigation__checkbox {
   display: none; }
@@ -671,6 +723,14 @@ body {
   border-radius: 50%;
   cursor: pointer;
   box-shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.2); }
+  @media (max-width: 56.25em) {
+    .navigation__btn {
+      top: 4.4rem;
+      right: 4.4rem; } }
+  @media (max-width: 37.5em) {
+    .navigation__btn {
+      top: 3.4rem;
+      right: 3.4rem; } }
 
 .navigation__bg {
   height: 6rem;
@@ -684,6 +744,14 @@ body {
   backface-visibility: hidden;
   -webkit-transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
   transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
+  @media (max-width: 56.25em) {
+    .navigation__bg {
+      top: 4.5rem;
+      right: 4.5rem; } }
+  @media (max-width: 37.5em) {
+    .navigation__bg {
+      top: 3.5rem;
+      right: 3.5rem; } }
 
 .navigation__nav {
   height: 100vh;

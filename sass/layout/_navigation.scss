@@ -15,6 +15,16 @@
         border-radius: 50%;
         cursor: pointer;
         @include box-shadow(2);
+
+        @include responsive(tab-port) { 
+            top: 4.4rem;
+            right: 4.4rem;        
+        } 
+
+        @include responsive(phone) { 
+            top: 3.4rem;
+            right: 3.4rem;        
+        } 
     }
     
     &__bg {
@@ -29,6 +39,16 @@
         backface-visibility: hidden;    
         -webkit-transition: all .8s cubic-bezier(0.86, 0, 0.07, 1);
                 transition: all .8s cubic-bezier(0.86, 0, 0.07, 1);
+
+                @include responsive(tab-port) { 
+                    top: 4.5rem;
+                    right: 4.5rem;        
+                } 
+
+                @include responsive(phone) { 
+                    top: 3.5rem;
+                    right: 3.5rem;        
+                } 
         
     }
     

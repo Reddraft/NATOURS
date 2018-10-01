@@ -21,11 +21,13 @@ html {
     @include responsive(big-desk) { //width > 1800
         font-size: 75%;  // 1rem = 12px; 12px/16px = 75%  
     }
-
-
 }
 
 body {
     padding: 3rem;
     box-sizing: border-box;
+
+    @include responsive(tab-port) { //width < 900
+        padding: 0; // 1rem = 8px; 8px/16px = 50%   
+    }
 }

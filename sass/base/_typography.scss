@@ -19,7 +19,12 @@ body {
         letter-spacing: 3.5rem;
         margin-right: -3.5rem;
         animation: moveInLeft 1s ease-in-out .25s backwards;
-        /* animation: name duration timing-function delay iteration-count direction fill-mode; */      
+
+        @include responsive(phone) { 
+            letter-spacing: 1rem;
+            font-size: 5rem; 
+            margin-right: 0;  
+        }     
    }
 
    &--sub {
@@ -29,6 +34,12 @@ body {
         letter-spacing: 1.74rem;
         margin-right: -1.74rem;
         animation: moveInRight 1s ease-in-out .25s backwards; 
+
+        @include responsive(phone) { 
+            letter-spacing: .5rem;
+            margin-right: 0;
+            font-weight: 400;
+        }   
     }
 }
 
@@ -43,6 +54,15 @@ body {
     color:transparent;
     transition: all .2s;
     backface-visibility: hidden;
+
+    @include responsive(tab-port) { 
+        font-size: 3rem;
+    }
+
+    @include responsive(phone) { 
+        font-size: 2.5rem;
+        line-height: 1.25;
+    }   
     
     &:hover {
         transform: scale(1.05) translateY(-1rem);
