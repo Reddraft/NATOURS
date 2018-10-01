@@ -1,4 +1,4 @@
-//clearfix
+//CLEARFIX
 @mixin cleargroup {
     &::after {
         content: "";
@@ -7,7 +7,7 @@
     }
 }
 
-//box-shadow mixin
+//BOX-SHADOW
 @mixin box_shadow ($level) {
 
     @if $level == 1 {
@@ -23,7 +23,39 @@
     } @else if $level == 6 {
         box-shadow: 0 2.4rem 4.8rem rgba($color-black, .2);
     }
+}
 
+//MEDIA QUERIES MANAGER
+/*
+0 - 600px: Phone
+660px - 900px: Tablet Portrait Mode
+900px - 1200px: Tablet Landscape Mode
+[1200px - 1800px] is where our normal styles apply 
+1800px + : Big Desktop
+*/
+
+@mixin responsive-phone {
+    @media (max-width: 600px) { @content };   
+}
+
+/*
+$breakpoint argument choices
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
+
+@mixin responsive($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) { @content }; // 600px
+    } @if $breakpoint == tab-port {
+        @media (max-width: 56.25em) { @content }; // 900px
+    } @if $breakpoint == tab-land {
+        @media (max-width: 75em) { @content }; // 1200px
+    } @if $breakpoint == big-desk {
+        @media (min-width: 112.5em) { @content }; // 1800px 
+    }
 }
 
 
