@@ -5,10 +5,15 @@
 
     @include responsive(tab-port) { 
         padding: 4.8rem 0;        
-    } 
+    }
+    
+    
 
     &__logo-box {
-        text-align: center; 
+        text-align: center;
+        @include responsive(tab-port) { 
+            margin-bottom: 2.4rem;        
+        }  
     }
 
     &__logo {
