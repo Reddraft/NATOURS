@@ -8,9 +8,23 @@
     border-radius: .4rem;
     transform: skewX(-12deg);
     backface-visibility: hidden;
+
+    @include responsive(tab-port) {
+        padding: 4rem;
+        padding-left: 7rem;
+        width: 100%;    
+    }
+
+    @include responsive(phone) {
+        transform: skewX(0); 
+    }
     
     & > * {
         transform: skewX(12deg);
+        
+        @include responsive(phone) {
+            transform: skewX(0); 
+        }
     }
     
     &__shape {
@@ -22,7 +36,11 @@
                 clip-path: circle(50% at 50% 50%);
         -webkit-shape-outside: circle(50% at 50% 50%);  
                 shape-outside: circle(50% at 50% 50%); 
-                transform: translateX(-3rem) skewX(12deg);               
+                transform: translateX(-3rem) skewX(12deg);
+        
+        @include responsive(phone) {
+            transform: translateX(-3rem) skewX(0); 
+        }               
     }
 
     &__img {
